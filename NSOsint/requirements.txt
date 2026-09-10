@@ -1,0 +1,28 @@
+# --- requirements.txt ---
+# NSOsint v1.2.7 — runtime dependencies.
+# Install:  pip install -r requirements.txt
+#
+# Optional fast-path extras (aiodns, lxml) and dev tooling (pytest, ruff)
+# are commented below. Uncomment as needed, or use the pyproject extras:
+#   pip install -e ".[fast]"
+#   pip install -e ".[dev]"
+
+# --- Core runtime ---
+aiohttp>=3.9.5
+dnspython>=2.6.1
+phonenumbers>=8.13.40
+python-whois>=0.9.4
+rich>=13.7.1
+click>=8.1.7
+beautifulsoup4>=4.12.3
+
+# --- Optional: fast DNS resolver + fast HTML parser ---
+# Install both for the fastest path. The code falls back to dnspython's
+# default resolver and Python's html.parser if these are absent.
+# aiodns>=3.2.0
+# lxml>=5.2.2
+
+# --- Optional: development / test ---
+# pytest>=8.0
+# pytest-asyncio>=0.23
+# ruff>=0.5
